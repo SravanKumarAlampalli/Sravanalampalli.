@@ -1,0 +1,42 @@
+-- Claims volume by status
+SELECT status, COUNT(*) AS total_claims
+FROM claims
+GROUP BY status
+ORDER BY total_claims DESC;
+
+-- Average claim processing time
+SELECT AVG(DATEDIFF(closed_date, submitted_date)) AS avg_processing_days
+FROM claims
+WHERE status = 'Closed';
+
+-- High-value claims
+SELECT claim_id, member_id, amount, status
+FROM claims
+WHERE amount > 10000
+ORDER BY amount DESC;
+import boto3
+import psycopg2
+
+s3 = boto3.client('s3')
+bucket = "healthcare-claims-data"
+key = "claims.csv"
+
+s3.download_file(bucket, key, "claims.csv")
+
+conn = psycopg2.connect(
+    dbname="healthdb",
+    user="admin",
+    password="password",
+    host="redshift-cluster.aws.com",
+    port="5439"
+)
+cur = conn.cursor()
+cur.execute("""
+    COPY claims
+    FROM 's3://healthcare-claims-data/claims.csv'
+    IAM_ROLE 'arn:aws:iam::1234567890:role/RedshiftCopyRole'
+    CSV IGNOREHEADER 1;
+""")
+conn.commit()
+cur.close()
+conn.close()

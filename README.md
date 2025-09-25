@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="C:\Users\srava\Downloads\Untitled design.png" alt="Banner" width="100%">
+  <img src="/workspaces/Sravanalampalli./Untitled design.png" alt="Banner" width="100%">
 </p>
 
 <h1 align="center">👋 Hi, I'm Sravan Kumar Alampalli</h1>

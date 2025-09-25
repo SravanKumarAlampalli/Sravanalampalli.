@@ -1,4 +1,10 @@
-# 👋 Hi, I’m Sravan Kumar Alampalli  
+<p align="center">
+  <img src="./assets/banner.png" alt="Banner" width="100%">
+</p>
+
+<h1 align="center">👋 Hi, I'm Sravan Kumar Alampalli</h1>
+<h3 align="center">🚀 Healthcare Business Analyst | Data Analytics | Cloud | Agile</h3>
+
 
 🚀 **Healthcare Business Analyst | Data-Driven Problem Solver | Agile Enthusiast**  
 

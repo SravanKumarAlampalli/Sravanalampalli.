@@ -1,12 +1,40 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cloud Data Pipelines — Sravan</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Cloud Data Pipelines — HIPAA-Ready at Scale | Sravan</title>
 <link rel="stylesheet" href="../assets/css/style.css">
-</head><body><div class="container">
-<a href="../index.html">← Back to Home</a>
-<h1>Cloud Data Pipelines</h1>
-<p>AWS (S3, EC2, Redshift), GCP (BigQuery, Cloud Storage), and Databricks for secure, scalable analytics.</p>
-<h2>Results</h2>
-<p>Improved data processing efficiency by ~20% while maintaining HIPAA/HITECH compliance.</p>
-<div class="footer"><p>Back to <a href="../index.html">Home</a></p></div>
-</div></body></html>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html">← Back to Home</a>
+  <h1>Cloud Data Pipelines: HIPAA-Ready, Scalable, and Inspectable</h1>
+  <p>
+    Analytics moves at the speed of the pipeline. I implement AWS and GCP patterns—S3⇄Redshift, GCS⇄BigQuery, and 
+    DataBricks processing—to deliver governed datasets to BI with clear lineage and access controls that stand up to 
+    healthcare compliance requirements.
+  </p>
+
+  <h2>Architectural Patterns</h2>
+  <ul>
+    <li><strong>Ingestion & Staging:</strong> encrypted object storage (S3/GCS), schema registry, PHI minimization at source.</li>
+    <li><strong>Transformation:</strong> DataBricks or SQL ELT with versioned logic and data quality gates.</li>
+    <li><strong>Serve Layer:</strong> Redshift/BigQuery marts optimized for BI; row-level policies for least privilege.</li>
+  </ul>
+
+  <h2>Verified Impact</h2>
+  <ul>
+    <li><strong>~20% faster</strong> data processing for reporting while maintaining HIPAA/HITECH controls.</li>
+    <li>Cleaner BI refresh cycles and fewer downstream defects due to pre-publish validations.</li>
+  </ul>
+
+  <h2>Controls That Matter</h2>
+  <p>
+    IAM least privilege • KMS-backed encryption • private endpoints • data retention policies • 
+    audit logs tying users, changes, and datasets—so Compliance is a partner, not a blocker.
+  </p>
+
+  <div class="footer"><p>Back to <a href="../index.html">Home</a></p></div>
+</div>
+</body>
+</html>
